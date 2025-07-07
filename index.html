@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Navbar RTL</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
+      rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+
+    <!-- ✅ Social Icons -->
+    <div class="social-icons">
+      <a href="#">En</a>
+      <a href="#"><img src="assets/twitter.svg" alt="Twitter"></a>
+      <a href="#"><img src="assets/facebook.svg" alt="Facebook"></a>
+      <a href="#"><img src="assets/linkedin.svg" alt="LinkedIn"></a>
+    </div>
+
+    <!-- ✅ Navbar -->
+    <header class="navbar">
+      <div class="logo">
+        <img src="assets/logo.svg" alt="Logo">
+
+      </div>
+      <nav class="nav-links" id="navLinks">
+        <a href="#">الرئيسية</a>
+        <a href="#">عن المركز</a>
+        <a href="#">متابعات</a>
+        <a href="#">مراجعات</a>
+        <a href="#">إصدارات</a>
+        <a href="#">وثائق</a>
+        <a href="#">المركز الإعلامي</a>
+        <a href="#">المشاركة المجتمعية</a>
+        <a class="btn">مع</a>
+      </nav>
+      <!-- ✅ Hamburger Icon -->
+      <div class="hamburger" onclick="toggleMenu()">
+        ☰
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="card-news">
+        <div class="right-side">
+          <span class="label">شؤون فلسطينية</span>
+          <h1>إحياء مبادرة السلام العربية<br> أفضل طريق لإنهاء الحرب</h1>
+          <p>
+            بعد ثمانية أشهر من الحرب الوحشية التي شنتها إسرائيل على غزة، وصلت
+            الولايات المتحدة وحلفاؤها الأوروبيون وقوى العالم الرائدة الأخرى إلى
+            حدهم. إلى جانب مواجهة مستوى مروع من قتل المدنيين .. اقرأ المزيد
+          </p>
+        </div>
+        <div class="left-side">
+          <div class="news-item active">
+            <img src="assets/news_pic1.png"
+              alt="News 1">
+            <div>
+              <p>قبل 1 يوم</p>
+              <h3>إحياء مبادرة السلام العربية أفضل طريق لإنهاء الحرب</h3>
+            </div>
+          </div>
+          <div class="news-item ">
+            <img src="assets/news_pic2.png"
+              alt="News 1">
+            <div>
+              <p>قبل 1 يوم</p>
+              <h3>إحياء مبادرة السلام العربية أفضل طريق لإنهاء الحرب</h3>
+            </div>
+          </div>
+          <div class="news-item">
+            <img src="assets/news_pic3.png"
+              alt="News 2">
+            <div>
+              <p>قبل 1 يوم</p>
+              <h3>إحياء مبادرة السلام العربية أفضل طريق لإنهاء الحرب</h3>
+            </div>
+          </div>
+          <div class="news-item">
+            <img src="assets/news_pic4.png"
+              alt="News 3">
+            <div>
+              <p>قبل 1 يوم</p>
+              <h3>إحياء مبادرة السلام العربية أفضل طريق لإنهاء الحرب</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="documents-section">
+        <span class="section-title">وثائق تاريخية</span>
+        <img src="./assets/design_1.svg" alt="design">
+        <div class="documents-grid">
+          <div class="document-card"
+            style="background-image: url('assets/doc_pic1.png');">
+            <div class="overlay">
+              <h3>العرب الفلسطينيون</h3>
+              <div class="icons">
+                <a href="#" class="icon download" title="تحميل"></a>
+                <a href="#" class="icon view" title="معاينة"></a>
+              </div>
+            </div>
+          </div>
+          <div class="document-card"
+            style="background-image: url('assets/doc_pic2.png');">
+            <div class="overlay">
+              <h3>فلسطين</h3>
+              <div class="icons">
+                <a href="#" class="icon download" title="تحميل"></a>
+                <a href="#" class="icon view" title="معاينة"></a>
+              </div>
+            </div>
+          </div>
+          <div class="document-card"
+            style="background-image: url('assets/doc_pic3.png');">
+            <div class="overlay">
+              <h3>الوعد العراقي</h3>
+              <div class="icons">
+                <a href="#" class="icon download" title="تحميل"></a>
+                <a href="#" class="icon view" title="معاينة"></a>
+              </div>
+            </div>
+          </div>
+          <div class="document-card"
+            style="background-image: url('assets/doc_pic4.png');">
+            <div class="overlay">
+              <h3>فلسطين في التاريخ</h3>
+              <div class="icons">
+                <a href="#" class="icon download" title="تحميل"></a>
+                <a href="#" class="icon view" title="معاينة"></a>
+              </div>
+            </div>
+          </div>
+          <div class="document-card"
+            style="background-image: url('assets/doc_pic1.png');">
+            <div class="overlay">
+              <h3>وعد بلفور</h3>
+              <div class="icons">
+                <a href="#" class="icon download" title="تحميل"></a>
+                <a href="#" class="icon view" title="معاينة"></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="memoirs">
+        <!-- ✅ العمود الأيمن -->
+        <div class="right-memoirs">
+          <div class="memoir-cards">
+            <div class="memoir-detail">
+              <img src="./assets/star.svg" alt="star" class="star">
+              <h3 class="memoir-title">أوراق موقف</h3>
+            </div>
+            <div>
+              <div class="memoir-card">
+                <div class="memoir-info">
+                  <span>2025 يناير 25</span>
+                  <p>اليوميات الفلسطينية المجلد الثاني والثلاثون من
+                    الاصدارات</p>
+                </div>
+                <img src="./assets/doc_pic1.png" alt="pic">
+              </div>
+              <div class="memoir-card">
+                <div class="memoir-info">
+                  <span>2025 يناير 25</span>
+                  <p>اليوميات الفلسطينية المجلد الثاني والثلاثون من
+                    الاصدارات</p>
+                </div>
+                <img src="./assets/doc_pic3.png" alt="pic">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="separator"></div>
+
+        <!-- ✅ العمود الأيسر (نسخة من العمود الأيمن مع محتوى جديد لو أردت) -->
+        <div class="left-memoirs">
+          <div class="memoir-cards">
+            <div class="memoir-detail">
+              <img src="./assets/star.svg" alt="star" class="star">
+              <h3 class="memoir-title">وثائق أخرى</h3>
+            </div>
+            <div>
+              <div class="memoir-card">
+                <div class="memoir-info">
+                  <span>2025 فبراير 12</span>
+                  <p>اليوميات الفلسطينية المجلد الثالث والثلاثون من
+                    الاصدارات</p>
+                </div>
+                <img src="./assets/doc_pic2.png" alt="pic">
+              </div>
+              <div class="memoir-card">
+                <div class="memoir-info">
+                  <span>2025 مارس 05</span>
+                  <p>اليوميات الفلسطينية المجلد الرابع والثلاثون من
+                    الاصدارات</p>
+                </div>
+                <img src="./assets/doc_pic4.png" alt="pic">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+<div class="policies">
+  <span class="policy-title">أوراق سياسات</span>
+  <img src="./assets/design_1.svg" alt="design">
+  <p class="policy-parag">
+    بعد ثمانية أشهـــــر من الحــــــرب الوحشية التي شــــنتها إســـرائيل على غــــزة...
+  </p>
+
+  <div class="policy-cards">
+    <div class="policy-cards-inner">
+      <div class="policy-card">
+        <img src="./assets/doc_pic3.png" alt="وثيقة سياسية">
+        <div class="card-info">
+          <span class="card-date">2025 يناير 25</span>
+          <p class="card-title">شؤون فلسطينية في الشتات</p>
+        </div>
+      </div>
+      <div class="policy-card">
+        <img src="./assets/doc_pic3.png" alt="وثيقة سياسية">
+        <div class="card-info">
+          <span class="card-date">2025 يناير 25</span>
+          <p class="card-title">شؤون فلسطينية في الشتات</p>
+        </div>
+      </div>
+      <div class="policy-card">
+        <img src="./assets/doc_pic3.png" alt="وثيقة سياسية">
+        <div class="card-info">
+          <span class="card-date">2025 يناير 25</span>
+          <p class="card-title">شؤون فلسطينية في الشتات</p>
+        </div>
+      </div>
+      <div class="policy-card">
+        <img src="./assets/doc_pic3.png" alt="وثيقة سياسية">
+        <div class="card-info">
+          <span class="card-date">2025 يناير 25</span>
+          <p class="card-title">شؤون فلسطينية في الشتات</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="carousel-indicators">
+    <span class="indicator active" data-slide="0"></span>
+    <span class="indicator" data-slide="1"></span>
+  </div>
+</div>
+
+      <div class="affairs">
+        <div class="right-affairs">
+          <div class="affairs-detail">
+            <div class="affairs-head">
+              <img src="./assets/star.svg" alt="star">
+              <span class="affairs-title">أوراق موقف</span>
+            </div>
+            <p class="affairs-parag">
+              بعد ثمانية أشهر من الحرب الوحشية التي شنتها إسرائيل على غزة،
+              وصلت الولايات المتحدة وحلفاؤها الأوروبيون وقوى العالم الرائدة
+              الأخرى إلى حدهم. إلى جانب مواجهة مستوى مروع من قتل المدنيين ..
+              اقرأ المزيد
+            </p>
+          </div>
+
+          <div class="books-side">
+            <img src="./assets/books.png" alt="books">
+          </div>
+        </div>
+
+        <div class="left-affairs">
+          <div class="affairs-cards">
+            <div class="affairs-card">
+              <div class="affair-icon">
+                <img src="./assets/star.svg" alt="star icon">
+              </div>
+              <div class="affair-content">
+                <span class="affair-date">يناير</span>
+                <p class="affair-title">شؤون فلسطينية في الشتات والنزوح في
+                  الغربة</p>
+                <div class="affair-actions">
+                  <span>مشاهدة</span>
+                  <span>تحميل</span>
+                </div>
+              </div>
+            </div>
+            <div class="affairs-card">
+              <div class="affair-icon">
+                <img src="./assets/star.svg" alt="star icon">
+              </div>
+              <div class="affair-content">
+                <span class="affair-date">يناير</span>
+                <p class="affair-title">شؤون فلسطينية في الشتات والنزوح في
+                  الغربة</p>
+                <div class="affair-actions">
+                  <span>مشاهدة</span>
+                  <span>تحميل</span>
+                </div>
+              </div>
+            </div>
+            <div class="affairs-card">
+              <div class="affair-icon">
+                <img src="./assets/star.svg" alt="star icon">
+              </div>
+              <div class="affair-content">
+                <span class="affair-date">يناير</span>
+                <p class="affair-title">شؤون فلسطينية في الشتات والنزوح في
+                  الغربة</p>
+                <div class="affair-actions">
+                  <span>مشاهدة</span>
+                  <span>تحميل</span>
+                </div>
+              </div>
+            </div>
+            <div class="affairs-card">
+              <div class="affair-icon">
+                <img src="./assets/star.svg" alt="star icon">
+              </div>
+              <div class="affair-content">
+                <span class="affair-date">يناير</span>
+                <p class="affair-title">شؤون فلسطينية في الشتات والنزوح في
+                  الغربة</p>
+                <div class="affair-actions">
+                  <span>مشاهدة</span>
+                  <span>تحميل</span>
+                </div>
+              </div>
+            </div>
+            <div class="affairs-card">
+              <div class="affair-icon">
+                <img src="./assets/star.svg" alt="star icon">
+              </div>
+              <div class="affair-content">
+                <span class="affair-date">يناير</span>
+                <p class="affair-title">شؤون فلسطينية في الشتات والنزوح في
+                  الغربة</p>
+                <div class="affair-actions">
+                  <span>مشاهدة</span>
+                  <span>تحميل</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="video-card">
+        <img src="./assets/vidoe-bacground.png" alt="video background"
+          class="video-bg">
+        <div class="video-overlay">
+          <button class="play-btn">
+            <img src="./assets/play-button.svg" alt="play-btn" class="play-btn">
+          </button>
+          <p class="video-title">إحياء مبادرة السلام العربية أفضل طريق لإنهاء
+            الحرب</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="windows-card">
+      <img src="./assets/news-window.png" alt="news background">
+      <div class="windows-overlay"></div>
+      <div class="windows-content">
+        <span class="windows-label">نشرة أخبار نٌيو</span>
+        <h2 class="windows-title">
+          إحياء مبادرة السلام العربية أفضل طريقة لإنهاء الحرب
+        </h2>
+        <button class="windows-btn">المزيد<br>+</button>
+      </div>
+    </div>
+
+    <section class="hero">
+      <!-- ✅ قسم جديد بعنوان يوميات -->
+<div class="diaries">
+  <span class="policy-title">يوميات</span>
+  <img src="./assets/design_1.svg" alt="design">
+  <p class="policy-parag">
+    بعد ثمانية أشهر من الحرب الوحشية التي شنتها إسرائيل على غزة،
+    وصلت الولايات المتحدة وحلفاؤها الأوروبيون وقوى العالم الرائدة الأخرى
+    إلى حدهم.
+    إلى جانب مواجهة مستوى مروع من قتل المدنيين.
+  </p>
+
+  <div class="policy-cards">
+    <div class="policy-cards-inner diaries-inner">
+      <div class="policy-card">
+        <img src="./assets/doc_pic3.png" alt="يوميات">
+        <div class="card-info">
+          <span class="card-date">2025 يناير 25</span>
+          <p class="card-title">اليوميات الفلسطينية في الشتات</p>
+        </div>
+      </div>
+      <!-- باقي البطاقات نفسها -->
+      <div class="policy-card">
+        <img src="./assets/doc_pic3.png" alt="يوميات">
+        <div class="card-info">
+          <span class="card-date">2025 يناير 25</span>
+          <p class="card-title">اليوميات الفلسطينية في الشتات</p>
+        </div>
+      </div>
+      <div class="policy-card">
+        <img src="./assets/doc_pic3.png" alt="يوميات">
+        <div class="card-info">
+          <span class="card-date">2025 يناير 25</span>
+          <p class="card-title">اليوميات الفلسطينية في الشتات</p>
+        </div>
+      </div>
+      <div class="policy-card">
+        <img src="./assets/doc_pic3.png" alt="يوميات">
+        <div class="card-info">
+          <span class="card-date">2025 يناير 25</span>
+          <p class="card-title">اليوميات الفلسطينية في الشتات</p>
+        </div>
+      </div>
+      <div class="policy-card">
+        <img src="./assets/doc_pic3.png" alt="يوميات">
+        <div class="card-info">
+          <span class="card-date">2025 يناير 25</span>
+          <p class="card-title">اليوميات الفلسطينية في الشتات</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="carousel-indicators diaries-indicators">
+    <span class="indicator active" data-slide="0"></span>
+    <span class="indicator" data-slide="1"></span>
+  </div>
+</div>
+
+<div class="diaries">
+  <span class="policy-title">أوراق سياسات</span>
+  <img src="./assets/design_1.svg" alt="design">
+  <p class="policy-parag">
+    بعد ثمانية أشهـــــر من الحــــــرب الوحشية التي شــــنتها إســـرائيل على غــــزة...
+  </p>
+
+  <div class="policy-cards">
+    <div class="policy-cards-inner">
+      <div class="policy-card">
+        <img src="./assets/doc_pic3.png" alt="وثيقة سياسية">
+        <div class="card-info">
+          <span class="card-date">2025 يناير 25</span>
+          <p class="card-title">شؤون فلسطينية في الشتات</p>
+        </div>
+      </div>
+      <div class="policy-card">
+        <img src="./assets/doc_pic3.png" alt="وثيقة سياسية">
+        <div class="card-info">
+          <span class="card-date">2025 يناير 25</span>
+          <p class="card-title">شؤون فلسطينية في الشتات</p>
+        </div>
+      </div>
+      <div class="policy-card">
+        <img src="./assets/doc_pic3.png" alt="وثيقة سياسية">
+        <div class="card-info">
+          <span class="card-date">2025 يناير 25</span>
+          <p class="card-title">شؤون فلسطينية في الشتات</p>
+        </div>
+      </div>
+      <div class="policy-card">
+        <img src="./assets/doc_pic3.png" alt="وثيقة سياسية">
+        <div class="card-info">
+          <span class="card-date">2025 يناير 25</span>
+          <p class="card-title">شؤون فلسطينية في الشتات</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="carousel-indicators">
+    <span class="indicator active" data-slide="0"></span>
+    <span class="indicator" data-slide="1"></span>
+  </div>
+</div>
+
+      <div class="library">
+        <div class="library-header-img">
+          <img src="./assets/library.png" alt="library" class="library-img">
+        </div>
+        <div class="library-content">
+          <span>مكتبة مركز الابحاث</span>
+          <p>
+            مكتبة الموارد هي مساحة غنية بالمراجع والأدوات التعليمية التي تساعدك
+            في الوصول إلى المعرفة والمعلومات بشكل شامل وسهل. تضم المكتبة مجموعة
+            متنوعة من الكتب والمقالات
+          </p>
+        </div>
+        <div>
+          <button class="library-btn">تصفح الكتب</button>
+        </div>
+      </div>
+
+      <div class="new-releases">
+        <span class="new-releases-title">صدر حديثًا</span>
+        <img src="./assets/design_1.svg" alt="design">
+        <div class="new-releases-grid">
+          <!-- بطاقة كتاب -->
+          <div class="book-card">
+            <div class="book-card-img">
+              <img src="./assets/doc_pic3.png" alt="غلاف الكتاب">
+            </div>
+            <div class="book-card-content">
+              <span class="book-date">25 يناير 2025</span>
+              <h3 class="book-title">شؤون فلسطينية في الشتات</h3>
+              <p class="book-desc">
+                بعد نهاية أشهر من الحرب الوحشية التي شنتها إسرائيل على غزة، وصلت
+                الولايات المتحدة وحلفاؤها إلى حدهم...
+              </p>
+              <div class="book-icons">
+                <a href="#"><i class="icon-download">⬇️</i></a>
+                <a href="#"><i class="icon-view">👁️</i></a>
+              </div>
+            </div>
+          </div>
+          <div class="book-card">
+            <div class="book-card-img">
+              <img src="./assets/doc_pic3.png" alt="غلاف الكتاب">
+            </div>
+            <div class="book-card-content">
+              <span class="book-date">25 يناير 2025</span>
+              <h3 class="book-title">شؤون فلسطينية في الشتات</h3>
+              <p class="book-desc">
+                بعد نهاية أشهر من الحرب الوحشية التي شنتها إسرائيل على غزة، وصلت
+                الولايات المتحدة وحلفاؤها إلى حدهم...
+              </p>
+              <div class="book-icons">
+                <a href="#"><i class="icon-download">⬇️</i></a>
+                <a href="#"><i class="icon-view">👁️</i></a>
+              </div>
+            </div>
+          </div>
+          <div class="book-card">
+            <div class="book-card-img">
+              <img src="./assets/doc_pic3.png" alt="غلاف الكتاب">
+            </div>
+            <div class="book-card-content">
+              <span class="book-date">25 يناير 2025</span>
+              <h3 class="book-title">شؤون فلسطينية في الشتات</h3>
+              <p class="book-desc">
+                بعد نهاية أشهر من الحرب الوحشية التي شنتها إسرائيل على غزة، وصلت
+                الولايات المتحدة وحلفاؤها إلى حدهم...
+              </p>
+              <div class="book-icons">
+                <a href="#"><i class="icon-download">⬇️</i></a>
+                <a href="#"><i class="icon-view">👁️</i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- كرّر نفس البطاقة حسب الحاجة -->
+          <div class="book-card">
+            <div class="book-card-img">
+              <img src="./assets/doc_pic3.png" alt="غلاف الكتاب">
+            </div>
+            <div class="book-card-content">
+              <span class="book-date">25 يناير 2025</span>
+              <h3 class="book-title">شؤون فلسطينية في الشتات</h3>
+              <p class="book-desc">
+                بعد نهاية أشهر من الحرب الوحشية التي شنتها إسرائيل على غزة، وصلت
+                الولايات المتحدة وحلفاؤها إلى حدهم...
+              </p>
+              <div class="book-icons">
+                <a href="#"><i class="icon-download">⬇️</i></a>
+                <a href="#"><i class="icon-view">👁️</i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- كرّر حسب عدد الكتب -->
+        </div>
+      </div>
+
+      <div class="conference">
+        <div class="conference-image">
+          <img src="./assets/doc_pic3.png" alt="صورة مؤتمر">
+        </div>
+        <div class="conference-content">
+          <span class="conference-heading">مؤتمرات</span>
+          <span class="conference-title">المدافعون عن حقوق الانسان في القانون
+            الدولي</span>
+          <p class="conference-text">
+            بعد ثمانية أشهر من الحرب الوحشية التي شنتها إسرائيل على غزة، وصلت
+            الولايات المتحدة وحلفاؤها الأوروبيون وقوى العالم الرائدة الأخرى إلى
+            حدهم، إلى جانب مواجهة مستوى مروع من قتل المدنيين.
+          </p>
+          <div class="conference-buttons">
+            <button>اليوم الأول</button>
+            <button>اليوم الثاني</button>
+            <button>اليوم الثالث</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="subscribe">
+        <div class="subscribe-content">
+          <h2>انضم الى قائمتنا البريدية</h2>
+          <p>
+            انضمامك معنا يتيح لك فرصة الحصول على اخر المستجدات عبر النشرة
+            البريدية الاسبوعية
+          </p>
+          <form class="subscribe-form">
+            <input type="email" placeholder="الإسم" required>
+            <input type="email" placeholder="البريد الإلكتروني" required>
+            <button type="submit">اشترك</button>
+          </form>
+        </div>
+      </div>
+
+    </section>
+
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-links">
+          <a href="#">الرئيسية</a>
+          <a href="#">عن المركز</a>
+          <a href="#">متابعات</a>
+          <a href="#">مراجعات</a>
+          <a href="#">إصدارات</a>
+          <a href="#">وثائق</a>
+          <a href="#">المركز الإعلامي</a>
+          <a href="#">المشاركة المجتمعية</a>
+        </div>
+
+        <div>
+          <p class="footer-text">
+            جميع الحقوق محفوظة &copy; 2024 مركز الابحاث الفلسطيني
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+    function toggleMenu() {
+  const nav = document.getElementById('navLinks');
+  nav.classList.toggle('show');
+  
+  // إغلاق القائمة عند النقر على رابط
+  const navLinks = document.querySelectorAll('.nav-links a');
+  navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      if (window.innerWidth <= 768) {
+        nav.classList.remove('show');
+      }
+    });
+  });
+  
+}
+
+  const indicators = document.querySelectorAll('.indicator');
+  const inner = document.querySelector('.policy-cards-inner');
+  const cardWidth = 208; // 188 + 20px margin تقريباً
+  const cardsPerSlide = 2; // عدد البطاقات التي تظهر دفعة واحدة
+
+  indicators.forEach(indicator => {
+    indicator.addEventListener('click', () => {
+      indicators.forEach(i => i.classList.remove('active'));
+      indicator.classList.add('active');
+
+      const slideIndex = indicator.getAttribute('data-slide');
+      const translateX = -slideIndex * cardWidth * cardsPerSlide;
+      inner.style.transform = `translateX(${translateX}px)`;
+    });
+  });
+
+  // Carousel لليوميات
+  const diariesIndicators = document.querySelectorAll('.diaries-indicators .indicator');
+  const diariesInner = document.querySelector('.diaries-inner');
+  const diariesCardWidth = 208; // نفس الحجم
+  const diariesCardsPerSlide = 2; // عدد البطاقات التي تظهر
+
+  diariesIndicators.forEach(indicator => {
+    indicator.addEventListener('click', () => {
+      diariesIndicators.forEach(i => i.classList.remove('active'));
+      indicator.classList.add('active');
+
+      const slideIndex = indicator.getAttribute('data-slide');
+      const translateX = -slideIndex * diariesCardWidth * diariesCardsPerSlide;
+      diariesInner.style.transform = `translateX(${translateX}px)`;
+    });
+  });
+
+  </script>
+
+  </body>
+</html>
