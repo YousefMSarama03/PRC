@@ -15,38 +15,55 @@ body {
 }
 
 
-/* ✅ Social Icons */
 .social-icons {
   position: fixed;
-  top: 40%;
-  left: 20px;
+  top: 25%;
+  left: 0;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 4px;
   z-index: 1000;
 }
 
 .social-icons a {
   color: #fff;
   background: #195b8a;
-  padding: 8px;
-  border-radius: 50%;
   text-align: center;
-  width: 40px;
-  height: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
+  text-decoration: none;
 }
+
+
+
+.social-icons a:first-child {
+  width: auto;
+  height: auto;
+  padding: 8px 12px;
+  border-radius: 0 20px 20px 0; 
+  font-size: 14px;
+  font-weight: bold;
+  background: #00a1df; 
+}
+
+.social-icons a{
+  width: auto;
+  height: auto;
+  padding: 8px 12px;
+  border-radius: 0 20px 20px 0; 
+  font-size: 14px;
+  font-weight: bold;
+  background: rgba(255, 255, 255, 1); 
+}
+
 
 .social-icons img {
   width: 20px;
   height: 20px;
-  z-index: 1000;
-
 }
 
-/* ✅ Navbar */
+/*  Navbar */
 .navbar {
   display: flex;
   justify-content: space-evenly;
@@ -87,7 +104,7 @@ body {
   background-color: #0B2B47;
 }
 
-/* ✅ Hamburger Icon */
+/*  Hamburger Icon */
 .hamburger {
   display: none;
   font-size: 28px;
@@ -95,7 +112,7 @@ body {
   cursor: pointer;
 }
 
-/* ✅ Responsive */
+/*  Responsive */
 @media (max-width: 768px) {
   .nav-links {
     display: none;
@@ -123,7 +140,7 @@ body {
   }
 }
 
-/* ✅ Responsive */
+/*  Responsive */
 @media (max-width: 1024px) {
   .logo img {
     height: 100px;
@@ -158,7 +175,7 @@ body {
 
 
 
-/* ✅ Hero Section */
+/*  Hero Section */
 .hero {
   margin: 0 200px;
 }
@@ -167,13 +184,9 @@ body {
   background:
     linear-gradient(rgb(28, 99, 143, 0.4)),
     url('./assets/news_pic1.png') center/cover no-repeat;
-  /* تغطي كامل الصفحة */
   background-position: 60px;
-  /* توسيط الصورة */
   background-attachment: scroll;
-  /* ثابتة عند التمرير */
   background-repeat: no-repeat;
-  /* عدم تكرار الصورة */
   display: grid;
   height: 512px;
   grid-template-columns: 57% 43%;
@@ -269,7 +282,6 @@ body {
 @media (max-width: 768px) {
   .hero {
     margin: 20px;
-    /* هامش متساوي صغير حول المحتوى */
   }
 
   .card-news {
@@ -283,7 +295,6 @@ body {
 
   .card-news .right-side {
     order: 2;
-    /* يظهر أسفل البطاقات */
     padding: 20px;
     align-items: center;
     text-align: center;
@@ -301,7 +312,6 @@ body {
 
   .card-news .left-side {
     order: 1;
-    /* تظهر فوق النص */
     padding: 0;
     background: transparent;
   }
@@ -367,13 +377,9 @@ body {
 
 .document-card {
   position: relative;
-  /* 🔥 أساسي: مرن! */
   max-width: 200px;
-  /* أقصى عرض */
   min-width: 208px;
-  /* أقل عرض لحماية الحجم */
   aspect-ratio: 3/4;
-  /* يحافظ على التناسب تلقائيًا */
   border-radius: 8px;
   overflow: hidden;
   background-size: cover;
@@ -446,7 +452,6 @@ body {
   color: #fff;
 }
 
-/* ✅ تابلت */
 @media (max-width: 992px) {
   .document-card {
     flex: 1 1 45%;
@@ -454,7 +459,6 @@ body {
   }
 }
 
-/* ✅ هاتف */
 @media (max-width: 600px) {
   .documents-grid {
     flex-direction: column;
@@ -482,11 +486,9 @@ body {
 }
 
 
-/* ✅ الحاوية العامة */
 .memoirs {
   display: flex;
   flex-wrap: wrap;
-  /* لدعم التكدس في الشاشات الصغيرة */
   min-height: 400px;
   margin-top: 68px;
   border-radius: 18px;
@@ -494,10 +496,8 @@ body {
   background-color: rgba(203, 227, 236, 1);
   padding: 20px 0;
   gap: 20px;
-  /* مسافة بسيطة بين اليمين واليسار عند التكدس */
 }
 
-/* ✅ الطرف الأيمن */
 .memoirs .right-memoirs {
   flex: 1;
   padding: 40px;
@@ -507,14 +507,12 @@ body {
 
 }
 
-/* ✅ الطرف الأيسر */
 .memoirs .left-memoirs {
   flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: start;
-  /* يلتزم بـ RTL */
   padding: 40px;
   gap: 20px;
 }
@@ -566,7 +564,6 @@ body {
   object-fit: cover;
 }
 
-/* ✅ زر */
 .btn {
   display: inline-block;
   background-color: #1C638F;
@@ -581,7 +578,6 @@ body {
   background-color: #0b3c5d;
 }
 
-/* ✅ التصميم المتجاوب */
 @media (max-width: 768px) {
   .memoirs {
     flex-direction: column;
@@ -590,7 +586,6 @@ body {
 
   .right-memoirs {
     order: -1;
-    /* يظهر أولاً */
     padding: 20px;
     text-align: center;
     align-items: center;
@@ -614,18 +609,13 @@ body {
   }
 }
 
-/* ✅ الفاصل الرئيسي */
 .separator {
   position: relative;
   width: 0px;
-  /* سمك الفاصل */
   background: transparent;
-  /* لا لون أساسي */
   min-height: 300px;
-  /* ارتفاع مبدئي */
 }
 
-/* ✅ الخط العلوي */
 .separator::before {
   content: "";
   position: absolute;
@@ -634,13 +624,10 @@ body {
   transform: translateX(-50%);
   width: 1px;
   height: 25%;
-  /* نصف أقل شوي */
   background-color: #1C638F;
   opacity: 0.5;
-  /* شفافية خفيفة */
 }
 
-/* ✅ الخط السفلي */
 .separator::after {
   content: "";
   position: absolute;
@@ -649,14 +636,11 @@ body {
   transform: translateX(-50%);
   width: 1px;
   height: 25%;
-  /* نصف أقل شوي */
   background-color: #1C638F;
   opacity: 0.5;
-  /* شفافية خفيفة */
 
 }
 
-/* ✅ إخفاء الفاصل عند الشاشات الصغيرة */
 @media (max-width: 768px) {
   .separator {
     display: none;
@@ -757,7 +741,6 @@ body {
 
 .indicator.active {
   background-color: #183C5B;
-  /* نفس لون العنوان مثلاً */
 }
 
 .policy-cards-inner {
@@ -790,7 +773,6 @@ body {
 .affairs-detail {
   position: relative;
   z-index: 2;
-  /* تظهر فوق الصورة */
 }
 
 .affairs-head {
@@ -817,12 +799,10 @@ body {
   bottom: 0;
   right: 0;
   width: 450px;
-  /* حجم مناسب */
   max-width: 100%;
   height: auto;
   object-fit: contain;
   z-index: 1;
-  /* خلف المحتوى */
 }
 
 .left-affairs {
@@ -831,7 +811,6 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /* توسيط رأسي داخل القسم */
 }
 
 .affairs-cards {
@@ -839,18 +818,13 @@ body {
   flex-direction: column;
   gap: 13px;
   max-height: 400px;
-  /* حدد أقصى ارتفاع مناسب */
   overflow-y: auto;
-  /* السماح بالتمرير العمودي */
   padding-left: 14px;
-  /* مساحة للـ scrollbar */
 }
 
 .affairs-cards::-webkit-scrollbar {
   height: 6px;
-  /* للتمرير الأفقي */
   width: 12px;
-  /* للتمرير العمودي */
 }
 
 .affairs-cards::-webkit-scrollbar-thumb {
@@ -921,7 +895,6 @@ body {
 }
 
 
-/* ✅ Responsive: لأجهزة التابلت والموبايل */
 @media (max-width: 768px) {
   .affairs {
     flex-direction: column;
@@ -940,7 +913,6 @@ body {
     right: 0;
     bottom: 0;
     opacity: 0.1;
-    /* تقليل الوضوح لتجنب تداخل المحتوى */
   }
 
   .affairs-detail {
@@ -952,7 +924,6 @@ body {
 .video-card {
   position: relative;
   aspect-ratio: 16/9;
-  /* النسبة الذهبية للفيديو */
   overflow: hidden;
   height: 446px;
   width: 100%;
@@ -1006,7 +977,6 @@ body {
 }
 
 
-/* ✅ لتنسيق card */
 .windows-card {
   position: relative;
   width: 100%;
@@ -1030,7 +1000,6 @@ body {
   background-color: rgba(28, 99, 143, 0.7);
 }
 
-/* ✅ المحتوى في منتصف الكارد */
 .windows-content {
   position: absolute;
   top: 50%;
@@ -1041,12 +1010,10 @@ body {
   text-align: center;
   color: #fff;
   padding: 30px 40px 80px;
-  /* لاحظ extra padding تحت للزر */
   max-width: 873px;
   box-sizing: border-box;
 }
 
-/* ✅ العنوان لا يخرج من الإطار */
 .windows-title {
   font-size: 35px;
   font-weight: 400;
@@ -1057,11 +1024,9 @@ body {
   white-space: normal;
 }
 
-/* ✅ زر المزيد ثابت أسفل الصندوق */
 .windows-btn {
   position: absolute;
   bottom: -30px;
-  /* يخرج جزء منه */
   left: 50%;
   transform: translateX(-50%);
   display: flex;
@@ -1174,19 +1139,16 @@ body {
 .new-releases-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  /* عمودان ثابتان */
   gap: 40px 30px;
 }
 
 @media (max-width: 768px) {
   .new-releases-grid {
     grid-template-columns: 1fr;
-    /* عمود واحد للشاشات الصغيرة */
   }
 
   .book-card {
     flex-direction: column;
-    /* الصورة فوق المحتوى */
     text-align: center;
   }
 
@@ -1263,14 +1225,12 @@ body {
 .conference {
   display: flex;
   align-items: stretch;
-  /* تمدد العناصر لتملأ الارتفاع */
   justify-content: space-between;
   background-color: rgba(28, 99, 143, 1);
   color: #fff;
   border-radius: 16px;
   overflow: hidden;
   padding: 0;
-  /* نحذف البادينغ لتكون الصورة كاملة */
   height: 485px;
 }
 
@@ -1338,15 +1298,13 @@ body {
 }
 
 .conference-image {
-  flex: 0 0 40%;
-  /* حجم الصورة نسبة 40% من العرض */
+  flex: 0 0 50%;
 }
 
 .conference-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  /* يجعل الصورة تغطي الحاوية بدون تشويه */
   display: block;
 }
 
@@ -1358,7 +1316,6 @@ body {
   .conference-image {
     flex: none;
     height: 250px;
-    /* ارتفاع مناسب عند النزول */
   }
 
   .conference-content {
@@ -1386,13 +1343,9 @@ body {
   font-size: 16px;
   margin-bottom: 25px;
   max-width: 600px;
-  /* حتى لا يمتد النص كثيرًا */
   line-height: 1.5;
-  /* لتحسين قراءة النص */
   color: #fff;
-  /* لون النص أبيض ليظهر فوق الخلفية */
   opacity: 0.5;
-  /* شفافية خفيفة للنص */
 }
 
 .subscribe-form {
@@ -1426,7 +1379,6 @@ body {
   background-color: #094261;
 }
 
-/* ✅ Media Query للشاشات الصغيرة */
 @media (max-width: 600px) {
   .subscribe h2 {
     font-size: 22px;
