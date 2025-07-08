@@ -1476,7 +1476,7 @@ body {
   justify-content: center;
 }
 
-.subscribe-form input[type="email"] {
+.subscribe-form input {
   padding: 12px 20px;
   border-radius: 28px;
   border: none;
