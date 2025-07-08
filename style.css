@@ -69,12 +69,26 @@ body {
   justify-content: space-evenly;
   align-items: center;
   position: relative;
+  padding: 50px 50px;
+  left: -14px;
 }
 
+.Logo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  background-color: #fff;
+  padding-bottom: 25px;
+  border-radius: 0 0 61px 61px;
+}
+.logo .logo-txt{
+  height: 35px;
+  width: auto;
+}
 
-
-.logo img {
-  height: 160px;
+.logo .logo-img {
+  height: 127px;
 }
 
 .nav-links {
@@ -95,9 +109,6 @@ body {
   text-align: center;
   font-weight: 200;
 }
-
-
-
 
 
 .nav-links a:hover {
@@ -142,7 +153,7 @@ body {
 
 /*  Responsive */
 @media (max-width: 1024px) {
-  .logo img {
+  .logo .logo-img {
     height: 100px;
   }
 
@@ -154,7 +165,7 @@ body {
 
 
 @media (max-width: 480px) {
-  .logo img {
+  .logo .logo-img {
     height: 80px;
   }
 
@@ -173,11 +184,19 @@ body {
   }
 }
 
+.Logo-container {
+  position: absolute; 
+  transform: translateX(34%); 
+  top: 0;     
+  right: 15;
+  z-index: 10;
+}
+
 
 
 /*  Hero Section */
 .hero {
-  margin: 0 200px;
+  margin: 20px 200px;
 }
 
 .card-news {
@@ -191,8 +210,13 @@ body {
   height: 512px;
   grid-template-columns: 57% 43%;
   border-radius: 18px;
-
+  transition:  1s ease-in-out, background 1s ease-in-out;
 }
+
+.card-news {
+  transition: background-image 1s ease-in-out, background 1s ease-in-out;
+}
+
 
 .right-side {
   padding: 30px;
@@ -237,6 +261,12 @@ body {
   border-radius: 15px;
 }
 
+.right-side h1,
+.right-side p,
+.right-side .label {
+  transition: opacity 0.5s ease;
+}
+
 .news-item {
   background-color: #e5e5e5;
   border-radius: 12px;
@@ -276,8 +306,20 @@ body {
   width: 84px;
   height: 72px;
   border-radius: 5px;
-  object-fit: cover;
 }
+
+.card-news {
+  transition: background-image 1s ease-in-out, background 1s ease-in-out;
+}
+
+.right-side .label,
+.right-side h1,
+.right-side p {
+  transition: opacity 0.5s ease;
+  will-change: opacity;
+  /* لجعل التغيير أنعم */
+}
+
 
 @media (max-width: 768px) {
   .hero {
@@ -349,6 +391,10 @@ body {
     left: 50%;
     transform: translateX(-50%);
   }
+}
+
+.news-item{
+  cursor: pointer;
 }
 
 .documents-section {
@@ -648,65 +694,55 @@ body {
 }
 
 .policies {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-items: center;
-  margin-top: 68px;
-  background-color: #EAEFF1;
-  border-radius: 18px;
-  padding: 40px 20px;
-  gap: 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 68px;
+    background-color: rgba(234, 239, 241, 1);
+    border-radius: 18px;
+    padding: 40px 20px;
+    gap: 18px;
+    overflow: hidden;
 }
 
 .policy-title {
   font-size: 25px;
   font-weight: 400;
   color: #183C5B;
-
+  text-align: center;
 }
 
 .policy-parag {
   color: #686868;
   font-size: 15px;
-  padding: 0 186px;
+  padding: 0 20px; /* كان كبير جدًا */
   text-align: center;
   line-height: 25px;
+  max-width: 900px;
 }
 
-.policy-cards {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 41px;
-  padding: 15px;
-  overflow: hidden;
-
-}
 
 .policy-card {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
-  width: 100%;
-  max-width: 800px;
-  min-width: 188px;
+  flex: 1 1 200px; /* للسماح بالمرونة */
+  max-width: 250px;
   margin: 0 10px;
 }
 
 .policy-card img {
-  width: 188px;
-  height: 251px;
+  width: 100%;
+  height: auto;
   border-radius: 12px;
 }
 
 .card-info {
   display: flex;
   flex-direction: column;
-  justify-content: start;
-  align-items: start;
+  align-items: flex-start;
+  width: 100%;
   padding: 10px 0;
 }
 
@@ -714,7 +750,7 @@ body {
   font-size: 18px;
   font-weight: 400;
   color: #686868;
-  margin: 0;
+  margin: 5px 0 0;
 }
 
 .card-info span {
@@ -745,10 +781,78 @@ body {
 
 .policy-cards-inner {
   display: flex;
-  transition: transform 0.5s ease;
-  width: max-content;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
 }
 
+@media (max-width: 768px) {
+  .policy-title {
+    font-size: 22px;
+  }
+
+  .policy-parag {
+    font-size: 14px;
+    padding: 0 15px;
+  }
+
+  .policy-card {
+    flex: 1 1 45%; /* عمودين في التابليت */
+  }
+}
+
+@media (max-width: 480px) {
+  .policy-card {
+    flex: 1 1 100%; /* عمود واحد في الجوال */
+  }
+
+  .policy-title {
+    font-size: 20px;
+  }
+
+  .policy-parag {
+    font-size: 13px;
+    padding: 0 10px;
+  }
+}
+
+
+.policy-card {
+  flex: 0 0 250px; /* عرض ثابت للبطاقة */
+  position: relative;
+  overflow: hidden;
+}
+
+
+.policy-cards-inner {
+  display: flex;
+  justify-content: flex-start;
+  gap: 20px;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+
+.bookmark {
+  position: absolute;
+  right: 127px; 
+  bottom: 65px;
+  width: 22px;
+  height: 24px;
+  background-color: rgba(28, 99, 143, 1); 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2; 
+    clip-path: polygon(
+    0% 0%,
+    100% 0%,
+    100% 100%,
+    50% 70%,
+    0% 100%
+  );
+}
 
 
 .affairs {
@@ -765,14 +869,13 @@ body {
   flex: 55%;
   position: relative;
   padding: 40px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+
 }
 
 .affairs-detail {
   position: relative;
   z-index: 2;
+  margin-right: 212px;
 }
 
 .affairs-head {
@@ -790,15 +893,16 @@ body {
 
 .affairs-parag {
   font-size: 16px;
-  line-height: 1.6;
-  color: #333;
+  line-height: 25px;
+  color: rgba(104, 104, 104, 1);
+  letter-spacing: 5px
 }
 
 .books-side img {
   position: absolute;
   bottom: 0;
   right: 0;
-  width: 450px;
+  width: 550px;
   max-width: 100%;
   height: auto;
   object-fit: contain;
@@ -1063,7 +1167,7 @@ body {
     margin-top: 68px;
     background-color: #CBE3EC;
     border-radius: 18px;
-    padding: 40px 20px;
+    padding: 40px 34px;
     gap: 18px;
     overflow: hidden;
   }
@@ -1134,7 +1238,21 @@ body {
   position: relative;
 }
 
+.view-icon{
+  background-color: rgba(28, 99, 143, 0.1);
+  border-radius: 50%;
+  padding: 8px;
+  border-style: solid;
+  border-color: rgba(28, 99, 143, 1);
+  border-width: 1px;
+  transition: all 0.3s ease;
+  cursor: pointer; 
+}
 
+.view-icon:hover {
+  background-color: rgba(28, 99, 143, 0.2);
+  border-color: #1c638f; 
+}
 
 .new-releases-grid {
   display: grid;
@@ -1328,16 +1446,19 @@ body {
   display: flex;
   align-items: center;
   margin-top: 68px;
-  background-image: linear-gradient(to top, rgba(29, 29, 29, 0.5), rgba(6, 32, 62, 0.5)), url("./assets/email-img.png");
+  background-image: url("./assets/email-img.png");
+  background-color: rgba(28, 99, 143, 0.8);
+  background-blend-mode: soft-light;
   background-size: cover;
   background-position: center;
-  background-blend-mode: multiply;
   border-radius: 18px;
   padding: 40px 45px;
   color: #fff;
   text-align: start;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  box-shadow: 2px 16px 18px 0px rgba(0, 0, 0, 0.051);
+
 }
+
 
 .subscribe p {
   font-size: 16px;
